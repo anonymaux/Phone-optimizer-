@@ -1,0 +1,59 @@
+ <link rel="stylesheet" href="speed.css">
+ <section class="speed-section" id="speed">
+
+  <h2>🚀 Speed Up Your Phone</h2>
+
+  <p class="intro">
+    A slow phone can be frustrating. Boosting your phone’s speed helps apps run smoothly and improves your overall experience.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🔄 Restart Regularly</h3>
+      <p>Restarting your phone refreshes memory and clears temporary files, improving speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Update System</h3>
+      <p>Keep your phone updated to benefit from performance improvements and bug fixes.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧹 Clear App Cache</h3>
+      <p>Remove cached files from apps to free up space and make your phone faster.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔧 Factory Reset</h3>
+      <p>Only if necessary — reset your phone to make it like new, removing all clutter.</p>
+    </div>
+
+  </div>
+  <button onclick="showSpeed()" class="btn">Boost Speed</button>
+
+  <div id="speedInfo"></div>
+</section>
+<script>
+function showSpeed() {
+  document.getElementById("speedInfo").innerHTML = `
+  <h3>🚀 Speed Optimization Guide</h3>
+
+  <p><b>Problems:</b></p>
+  <ul>
+    <li>Phone lagging</li>
+    <li>Slow apps opening</li>
+  </ul>
+
+  <p><b>Solutions:</b></p>
+  <ul>
+    <li>Restart phone regularly</li>
+    <li>Update system</li>
+    <li>Reduce animations</li>
+    <li>Clear cache</li>
+  </ul>
+  `;
+}
+</script>
+
+</section>

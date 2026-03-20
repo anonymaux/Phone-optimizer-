@@ -1,0 +1,78 @@
+
+ <style>
+ #internetInfo, #ramInfo, #storageInfo, #speedInfo {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  color: #cbd5f5;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
+ <link rel="stylesheet" href="inter.css">
+ <section class="internet-section" id="internet">
+
+  <h2>🌐 Improve Internet Speed</h2>
+
+  <p class="intro">
+    A slow internet connection can make browsing, streaming, and downloading frustrating. 
+    Follow these tips to boost your phone’s connection.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>✈️ Toggle Airplane Mode</h3>
+      <p>Turn airplane mode on and off to reset your network connection quickly.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌍 Change DNS</h3>
+      <p>Use faster DNS services like Google DNS or Cloudflare to improve internet speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>📶 Stay Close to Wi-Fi</h3>
+      <p>Being near the Wi-Fi router improves signal strength and speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Close Heavy Apps</h3>
+      <p>Apps consuming a lot of data in the background can slow down your connection.</p>
+    </div>
+
+  </div>
+  
+  <button onclick="showInternet()" class="btn">Fix My Internet</button>
+
+  <div id="internetInfo"></div>
+</section>
+<script>
+function showInternet() {
+  document.getElementById("internetInfo").innerHTML = `
+  <h3>🌐 Slow Internet - Detailed Guide</h3>
+
+  <p><b>Common Causes:</b></p>
+  <ul>
+    <li>Weak Wi-Fi signal</li>
+    <li>Too many apps using internet</li>
+    <li>DNS not optimized</li>
+  </ul>
+
+  <p><b>Solutions:</b></p>
+  <ul>
+    <li>Turn ON/OFF airplane mode ✈️</li>
+    <li>Move closer to router 📶</li>
+    <li>Change DNS to 8.8.8.8</li>
+    <li>Close background apps</li>
+  </ul>
+  `;
+}
+</script>
+
+</section>

@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="ram.css">
+<section class="ram-section" id="ram">
+
+  <h2>⚡ RAM Optimization</h2>
+
+  <p class="intro">
+    RAM (Random Access Memory) is responsible for running your apps smoothly.
+    When too many apps are open, your phone becomes slow and less responsive.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>📴 Close Background Apps</h3>
+      <p>Always close apps you are not using to free up memory.</p>
+    </div>
+
+    <div class="card">
+      <h3>❌ Remove Unused Apps</h3>
+      <p>Uninstall apps that you don’t use to reduce RAM usage.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚙️ Disable Animations</h3>
+      <p>Turn off animations in developer options to make your phone faster.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔄 Restart Regularly</h3>
+      <p>Restart your phone to refresh RAM and improve performance.</p>
+    </div>
+
+  </div>
+<button onclick="showRAM()" class="btn">Boost RAM</button>
+
+  <div id="ramInfo"></div>
+</section>
+<script>
+function showRAM() {
+  document.getElementById("ramInfo").innerHTML = `
+  <h3>⚡ RAM Optimization Guide</h3>
+
+  <p><b>What is RAM?</b></p>
+  <p>RAM is the memory used to run apps.</p>
+
+  <p><b>Problems:</b></p>
+  <ul>
+    <li>Too many apps open</li>
+    <li>Heavy apps (games)</li>
+  </ul>
+
+  <p><b>Solutions:</b></p>
+  <ul>
+    <li>Close background apps</li>
+    <li>Restart your phone</li>
+    <li>Disable animations</li>
+  </ul>
+  `;
+}
+</script>
+
+</section>

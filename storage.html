@@ -1,0 +1,60 @@
+
+ <link rel="stylesheet" href="scok.css">
+<section class="storage-section" id="storage">
+
+  <h2>📦 Storage Management</h2>
+
+  <p class="intro">
+    Your phone storage is where all your apps, photos, videos, and files are saved.
+    When your storage is full, your phone becomes slow and may stop working properly.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🗑️ Delete Unnecessary Files</h3>
+      <p>Remove old photos, videos, downloads, and duplicate files to free space.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Uninstall Unused Apps</h3>
+      <p>Delete apps you don’t use anymore to gain more storage and improve speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧹 Use Cleaning Apps</h3>
+      <p>Use apps like Files by Google to remove junk files and cache safely.</p>
+    </div>
+
+    <div class="card">
+      <h3>☁️ Move to Cloud or SD Card</h3>
+      <p>Store your files online or on an SD card to free internal storage.</p>
+    </div>
+
+  </div>
+  <button onclick="showStorage()" class="btn">Clean Storage</button>
+
+  <div id="storageInfo"></div>
+</section>
+<script>
+function showStorage() {
+  document.getElementById("storageInfo").innerHTML = `
+  <h3>📦 Storage Optimization Guide</h3>
+
+  <p><b>Problems:</b></p>
+  <ul>
+    <li>Phone storage full</li>
+    <li>Too many photos/videos</li>
+  </ul>
+
+  <p><b>Solutions:</b></p>
+  <ul>
+    <li>Delete large files</li>
+    <li>Uninstall unused apps</li>
+    <li>Use Google Drive or SD card</li>
+  </ul>
+  `;
+}
+</script>
+
+</section>

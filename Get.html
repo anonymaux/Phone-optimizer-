@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phone Optimizer Pro</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 350px;
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Score */
+.score {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+/* Progress bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress {
+    height: 100%;
+    width: 50%;
+    background: #38bdf8;
+    transition: 0.5s;
+}
+
+/* Button */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #0ea5e9;
+}
+
+/* Checklist */
+.checklist {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.checklist label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📱 Optimizer Pro</h1>
+
+    <div class="score" id="score">50%</div>
+
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+
+    <button onclick="startAI()">🚀 Get Started</button>
+
+    <div class="checklist">
+        <label><input type="checkbox" onclick="updateScore()"> Free storage space</label>
+        <label><input type="checkbox" onclick="updateScore()"> Removed unused apps</label>
+        <label><input type="checkbox" onclick="updateScore()"> Battery optimized</label>
+        <label><input type="checkbox" onclick="updateScore()"> Limited background apps</label>
+        <label><input type="checkbox" onclick="updateScore()"> Disabled animations</label>
+        <label><input type="checkbox" onclick="updateScore()"> Cleared cache</label>
+    </div>
+
+    <div class="result" id="result">⚠️ Your phone needs optimization</div>
+
+</div>
+
+<script>
+let baseScore = 50;
+
+function startAI() {
+    let messages = [
+        "🤖 Scanning storage...",
+        "⚡ Checking performance...",
+        "🔋 Analyzing battery...",
+        "✅ Optimization ready!"
+    ];
+
+    let i = 0;
+
+    let interval = setInterval(() => {
+        alert(messages[i]);
+        i++;
+        if (i >= messages.length) clearInterval(interval);
+    }, 800);
+}
+
+function updateScore() {
+    let checkboxes = document.querySelectorAll("input[type='checkbox']");
+    let checked = 0;
+
+    checkboxes.forEach(box => {
+        if (box.checked) checked++;
+    });
+
+    let score = baseScore + (checked * 8);
+    if (score > 100) score = 100;
+
+    document.getElementById("score").innerText = score + "%";
+    document.getElementById("progress").style.width = score + "%";
+
+    let result = "";
+
+    if (score < 60) {
+        result = "⚠️ Poor performance - optimize now!";
+    } else if (score < 80) {
+        result = "🙂 Average performance - improve it";
+    } else {
+        result = "🔥 Excellent performance!";
+    }
+
+    document.getElementById("result").innerText = result;
+}
+</script>
+
+</body>
+</html>

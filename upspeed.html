@@ -1,0 +1,99 @@
+ <style>
+ #internetInfo, #ramInfo, #storageInfo, #speedInfo {
+  margin-top: 20px;
+  background: #0f172a;
+  padding: 15px;
+  border-radius: 10px;
+  color: #cbd5f5;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+</style>
+ <link rel="stylesheet" href="inter.css">
+ <section class="internet-section" id="internet">
+<section id="settings">
+  <h2>⚙️ Optimize Your Phone (Settings Guide)</h2>
+  <p class="intro">Learn how to boost your phone performance using built-in settings</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🔋 Battery Optimization</h3>
+      <button onclick="showBattery()" class="btn">View Guide</button>
+      <div id="batteryInfo"></div>
+    </div>
+
+    <div class="card">
+      <h3>📦 Storage Settings</h3>
+      <button onclick="showStorageSettings()" class="btn">View Guide</button>
+      <div id="storageSettingsInfo"></div>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Developer Options</h3>
+      <button onclick="showDev()" class="btn">View Guide</button>
+      <div id="devInfo"></div>
+    </div>
+
+    <div class="card">
+      <h3>🌐 Network Settings</h3>
+      <button onclick="showNetwork()" class="btn">View Guide</button>
+      <div id="networkInfo"></div>
+    </div>
+
+  </div>
+</section>
+<script>
+
+// 🔋 BATTERY
+function showBattery() {
+  document.getElementById("batteryInfo").innerHTML = `
+  <ul>
+    <li>Activate Battery Saver mode</li>
+    <li>Reduce screen brightness</li>
+    <li>Disable background apps</li>
+    <li>Turn off Bluetooth & GPS when not used</li>
+  </ul>
+  `;
+}
+
+// 📦 STORAGE SETTINGS
+function showStorageSettings() {
+  document.getElementById("storageSettingsInfo").innerHTML = `
+  <ul>
+    <li>Go to Settings → Storage</li>
+    <li>Delete large files</li>
+    <li>Clear cache data</li>
+    <li>Move files to SD card</li>
+  </ul>
+  `;
+}
+
+// ⚡ DEVELOPER OPTIONS
+function showDev() {
+  document.getElementById("devInfo").innerHTML = `
+  <ul>
+    <li>Enable Developer Mode (tap build number 7 times)</li>
+    <li>Reduce animation scale (0.5x or off)</li>
+    <li>Limit background processes</li>
+  </ul>
+  `;
+}
+
+// 🌐 NETWORK
+function showNetwork() {
+  document.getElementById("networkInfo").innerHTML = `
+  <ul>
+    <li>Turn airplane mode ON/OFF</li>
+    <li>Reset network settings</li>
+    <li>Use faster DNS (8.8.8.8)</li>
+    <li>Switch between Wi-Fi and mobile data</li>
+  </ul>
+  `;
+}
+
+</script>
